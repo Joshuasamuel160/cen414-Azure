@@ -1,0 +1,54 @@
+<html>
+  <head>
+    <title>Dayo's Data Visualization Assignment</title>
+
+    <link rel="stylesheet" type="text/css" href= "{{ url_for('static', filename='css/main.css') }}">
+
+  </head>
+  <body>
+      <h1 align="center">Public Expenditure on education per pupil as a % of GDP per capital level of education</h1>
+
+    <div class="cell">
+        <p class="main-text">
+            In the bar plots below, what we see is the Public Expenditure on education per pupil as a % of GDP per capital level of education 
+            from the years 2010-2019
+        </p>
+        {% for i in range(0,9) %}
+        <img src="{{ url_for('static', filename=f'images/DATA{4 + i}.png') }}" width="70%" >
+        STANDARD DEVIATION: {{ context[2010+i][0] }}
+        VARIANCE: {{ context[2010+i][1] }}
+        RANGE: {{ context[2010+i][2] }}
+        {% endfor %}
+
+
+      </div>
+
+
+      <div  class="cell">
+        <p class="main-text">
+            The line graphs show below the different measures of dispersion(as indicated by the legend),
+            for the observation values in the bar plots above
+        </p>
+        <img src="{{ url_for('static', filename='images/dispersion_plots.png') }}" width="40%">
+        
+      </div>
+
+
+      <div  class="cell">
+        <p class="main-text">
+            We can also decide to visualize the median and interquartile ranges with the help of a boxplot. 
+            The diagram below helps us understand its structure.
+        </p>
+            <img src='https://cdn1.byjus.com/wp-content/uploads/2020/10/Box-Plot-and-Whisker-Plot-1.png' width="30%">
+            <br />
+            <br />
+            <br />
+
+            <img src="{{ url_for('static', filename='images/boxplots.png') }}" width="70%">
+
+
+
+      </div>
+
+  </body>
+</html>

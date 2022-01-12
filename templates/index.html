@@ -13,12 +13,21 @@
             In the bar plots below, what we see is the Public Expenditure on education per pupil as a % of GDP per capital level of education 
             from the years 2010-2019
         </p>
-        {% for i in range(0,9) %}
-        <img src="{{ url_for('static', filename=f'images/DATA{4 + i}.png') }}" width="70%" >
-        STANDARD DEVIATION: {{ context[2010+i][0] }}
+        <!-- {% for i in range(0,9) %} -->
+        <img src="{{ url_for('static', filename=f'images/DATA4.png') }}" width="70%" >
+        <img src="{{ url_for('static', filename=f'images/DATA5.png') }}" width="70%" >
+        <img src="{{ url_for('static', filename=f'images/DATA6.png') }}" width="70%" >
+        <img src="{{ url_for('static', filename=f'images/DATA7.png') }}" width="70%" >
+        <img src="{{ url_for('static', filename=f'images/DATA8.png') }}" width="70%" >
+        <img src="{{ url_for('static', filename=f'images/DATA9.png') }}" width="70%" >
+        <img src="{{ url_for('static', filename=f'images/DATA10.png') }}" width="70%" >
+        <img src="{{ url_for('static', filename=f'images/DATA11.png') }}" width="70%" >
+        <img src="{{ url_for('static', filename=f'images/DATA12.png') }}" width="70%" >
+        <img src="{{ url_for('static', filename=f'images/DATA13.png') }}" width="70%" >
+        <!-- STANDARD DEVIATION: {{ context[2010+i][0] }}
         VARIANCE: {{ context[2010+i][1] }}
-        RANGE: {{ context[2010+i][2] }}
-        {% endfor %}
+        RANGE: {{ context[2010+i][2] }} -->
+        <!-- {% endfor %} -->
 
 
       </div>

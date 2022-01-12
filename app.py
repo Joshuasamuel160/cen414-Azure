@@ -10,23 +10,23 @@ app =  Flask(__name__)
 
 @app.route('/', methods=['GET'])
 def index():
-    context = {2010:[], 2011:[], 2012:[], 2013:[], 2014:[], 2015:[], 2016:[], 2017:[], 2018:[], 2019:[]}
-    df = pd.read_csv('AFRICANDATA.csv')
+    # context = {2010:[], 2011:[], 2012:[], 2013:[], 2014:[], 2015:[], 2016:[], 2017:[], 2018:[], 2019:[]}
+    # df = pd.read_csv('AFRICANDATA.csv')
     
     
-    #generate plots
-    for i in range(2010,2019):    
-        print(f"\nFOR {i}")
-        print("Standard Deviation:") 
-        standard_deviation = df[f'{i}'].std()
-        print("VARIANCE:")
-        variance = df[f'{i}'].var()
-        print("RANGE:")
-        rang = (df[f'{i}'].max())-(df[f'{i}'].min())
+    # #generate plots
+    # for i in range(2010,2019):    
+    #     print(f"\nFOR {i}")
+    #     print("Standard Deviation:") 
+    #     standard_deviation = df[f'{i}'].std()
+    #     print("VARIANCE:")
+    #     variance = df[f'{i}'].var()
+    #     print("RANGE:")
+    #     rang = (df[f'{i}'].max())-(df[f'{i}'].min())
     
-        context[i] = [standard_deviation, variance, rang]
+    #     context[i] = [standard_deviation, variance, rang]
     
-    return render_template('index.html', context=context)
+    return render_template('index.html')
 
 
 @app.route('/refresh_plots', methods=['GET'])

@@ -1,10 +1,10 @@
 from flask import Flask, redirect, render_template
-from pymongo import MongoClient
+# from pymongo import MongoClient
 
 import pandas as pd
-import os
+# import os
 import numpy as np
-from plots import *
+# from plots import *
 
 app =  Flask(__name__)
 
